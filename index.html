@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector</title>
+</head>
+<body>
+    <h1>Выберите игру</h1>
+    <button onclick="selectGame('cube')">Кубик 🎲</button>
+    <button onclick="selectGame('basketball')">Баскетбол 🏀</button>
+    <button onclick="selectGame('darts')">Дартс 🎯</button>
+    <button onclick="selectGame('football')">Футбол ⚽</button>
+    <button onclick="selectGame('rps')">Камень, ножницы, бумага ✂️</button>
+    <button onclick="selectGame('slots')">Слоты 🎰</button>
+    <button onclick="selectGame('bowling')">Боулинг 🎳</button>
+    <!-- Добавьте другие игры здесь -->
+
+    <script>
+        function selectGame(game) {
+            Telegram.WebApp.sendData(game);  // Отправка данных обратно в бота
+        }
+    </script>
+</body>
+</html>
